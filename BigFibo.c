@@ -21,16 +21,16 @@ int main(){
         return 1;
     }
     
-    mpz_out_str (stdout,10,first);
+    mpz_out_str(stdout,10,first);
     printf("\n");
-    mpz_out_str (stdout,10,second);
+    mpz_out_str(stdout,10,second);
     printf("\n");
     
     for(i=1; i<=lim; i++){
         mpz_add(sum,first,second);
         mpz_set(first,second);
         mpz_set(second,sum);
-        mpz_out_str (stdout,10,sum);
+        mpz_out_str(stdout,10,sum);
         printf("\t");
     }
     
